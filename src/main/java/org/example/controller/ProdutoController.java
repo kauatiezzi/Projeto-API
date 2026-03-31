@@ -1,5 +1,6 @@
 package org.example.controller;
 
+import jakarta.validation.Valid;
 import org.example.model.Produto;
 import org.example.service.ProdutoService;
 import org.springframework.http.HttpStatus;
@@ -23,7 +24,7 @@ public class ProdutoController {
     }
 
     @PostMapping
-    public ResponseEntity<Produto> cadastrar(@RequestBody Produto produto) {
+    public ResponseEntity<Produto> cadastrar(@Valid @RequestBody Produto produto) {
         Produto produtoCadastrado = produtoService.cadastrar(produto);
         return ResponseEntity.status(HttpStatus.CREATED).body(produtoCadastrado);
     }
