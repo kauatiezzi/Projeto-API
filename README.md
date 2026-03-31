@@ -137,4 +137,4 @@ mvn spring-boot:run
 
 ## Autor
 
-Projeto desenvolvido por aluno para atividade pratica de API REST com Spring Boot.
+Projeto desenvolvido por mim para atividade pratica.
